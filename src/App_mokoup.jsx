@@ -46,7 +46,7 @@ const App = () => {
                 <div className=''>tema</div>                
               </div>
               
-              {/**
+              {/** AREA CENTRAL: SIDEBAR + CONTENIDO PRINCIPAL
                * NOTA: BREACKPOINTS: 
                * 360PX por defecto luego
                * sm	40rem (640px)	@media (width >= 40rem) { ... }
@@ -67,14 +67,11 @@ const App = () => {
                   <Sidebar handleClick={handleClickButton}></Sidebar>
                 </div>
           
-                    
-                    
                     {/**contenido principal, el area de los mensajes */}
                     <div className='w-screen grow bg-red-600'><Chat></Chat></div>
 
-        
-                
               </div>
+
               {/**FOOTER area del controlador, donde esta el input y el boton de enviar */}
               <div className='bg-indigo-800'><Controladores ></Controladores></div>
             </div>
