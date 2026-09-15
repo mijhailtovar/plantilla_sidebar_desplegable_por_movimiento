@@ -29,9 +29,13 @@ const App = () => {
 
   return (
     <ThemeContext value={colorsheme}>
-        {/**contenedor de la applicacion */}
-        <div className="app h-screen text-white bg-slate-900">
-          
+        {/**contenedor de la applicacion 
+         *
+         *   div de prueba para responsive:  
+            <div className="app h-screen text-white bg-slate-800 ">
+         */}
+        
+          <div className="app h-screen text-white max-sm:bg-indigo-500 sm:bg-amber-600 md:bg-blue-500 lg:bg-cyan-700 ">
             {/**flex flex-col indica que el header siempre estara arriba */}
             <div className='flex flex-col'>
               {/**LOGO DEL CHAT, BOTON DE CAMBIAR TEMA, TEXTO DE CHATBOT, BANNER */}
@@ -42,12 +46,23 @@ const App = () => {
                 <div className=''>tema</div>                
               </div>
               
-
-              <div className={`flex w-full flex-row justify-center transition-all  relative top-0 right-0 + ${active ? 'bg-sky-400  w-full md:right-56' : 'bg-amber-900  w-[calc(100%-256px) -translate-x-32 md:translate-0'}`}>
+              {/**
+               * NOTA: BREACKPOINTS: 
+               * 360PX por defecto luego
+               * sm	40rem (640px)	@media (width >= 40rem) { ... }
+                  md	48rem (768px)	@media (width >= 48rem) { ... }
+                  lg	64rem (1024px)	@media (width >= 64rem) { ... }
+               */}
+              <div className={`flex flex-row justify-center transition-all  relative top-0 right-0  +     
+              ${active
+                  ? 'w-full right-0'
+                  : 'w-[calc(100%+40vw)] right-[40vw] sm:w-[calc(100%+40vw)] sm:right-[40vw] md:w-[calc(100%+25vw)] md:right-[25vw] lg:w-[calc(100%+20vw)] lg:right-[20vw]'
+                }`} 
+              >
                 {/** sidebar DESPLEGABLE, A LA IZQUIERDA DEL ASIDE*/}
                 <div 
-                  className={ ' w-2/5 basis-0 md:basis-1/4' +
-                  ` transition-all duration-300 ` }
+                  className={ ' w-[40vw] sm:w-[40vw] md:w-[25vw] lg:w-[20vw] ' +
+                  ` transition-all duration-300` }
                   >
                   <Sidebar handleClick={handleClickButton}></Sidebar>
                 </div>
@@ -55,7 +70,7 @@ const App = () => {
                     
                     
                     {/**contenido principal, el area de los mensajes */}
-                    <div className='w-3/5 md:basis-3/4 flex-initial grow bg-red-600'><Chat></Chat></div>
+                    <div className='w-screen grow bg-red-600'><Chat></Chat></div>
 
         
                 
