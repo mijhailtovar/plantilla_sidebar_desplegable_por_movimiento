@@ -23,24 +23,24 @@ dist-ssr
 *.sln
 *.sw?
 
-src\barra_de_busqueda
-src\clock
-src\componentes_sincronizados
-src\item_list
-src\list_of_letters
-src\ref
-src\scrollIntoView
-src\seleccion_multiple
-src\1_onclick.jsx
-src\2_lista de esculturas.jsx
-src\3_Chat.jsx
-src\4_Editor_perfil.jsx
-src\5_formulario_que_se_desactiva_cuando_se_sube.jsx
-src\6_estados.jsx
-src\7_1_lift_states.jsx
-src\7_2_lift_states.jsx
-src\App.css
-src\colorsheme.css
-src\data.js
-src\setinterval-useImmer.jsx
-src\styles.css
+src/barra_de_busqueda
+src/clock
+src/componentes_sincronizados
+src/item_list
+src/list_of_letters
+src/ref
+src/scrollIntoView
+src/seleccion_multiple
+src/1_onclick.jsx
+src/2_lista de esculturas.jsx
+src/3_Chat.jsx
+src/4_Editor_perfil.jsx
+src/5_formulario_que_se_desactiva_cuando_se_sube.jsx
+src/6_estados.jsx
+src/7_1_lift_states.jsx
+src/7_2_lift_states.jsx
+src/App.css
+src/colorsheme.css
+src/data.js
+src/setinterval-useImmer.jsx
+src/styles.css
