@@ -14,9 +14,13 @@ import { ThemeContext } from "../context/ThemeContext";
 export default function Chat(){
     //variable de contexto
     const colorsheme = useContext(ThemeContext);
-    const class_name = 'panel-' + colorsheme;
+
+    // Variables dinámicas para diferenciar el contenido principal del fondo general
+    const chatTheme = colorsheme === 'dark' 
+        ? 'bg-slate-900 text-slate-100' 
+        : 'bg-white text-slate-800';
     
     return(
-        <main className={class_name}>CONTENIDO PRINCIPAL <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum</p></main>
+        <main className={chatTheme}>CONTENIDO PRINCIPAL <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum</p></main>
     );
 }
